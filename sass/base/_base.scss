@@ -1,0 +1,49 @@
+/** @format */
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+:root {
+  transition: all 0.3s;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% --> 1rem = 10px
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-huge) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 43.75%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--color-text);
+  background-color: var(--color-bg);
+
+  position: relative;
+}

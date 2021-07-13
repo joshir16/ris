@@ -1,0 +1,15 @@
+/** @format */
+
+@mixin section {
+  // height: 90vh;
+  padding: 7rem 5rem;
+  &:not(:last-child) {
+    border-bottom: 1px solid #333;
+  }
+}
+
+@mixin flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

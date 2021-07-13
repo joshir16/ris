@@ -1,0 +1,13 @@
+/** @format */
+
+.header {
+  @include flex-box;
+
+  &__box {
+    max-width: 80rem;
+
+    &--heading {
+      text-transform: none;
+    }
+  }
+}

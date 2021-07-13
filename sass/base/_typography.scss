@@ -1,0 +1,81 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+body {
+  //   font-family: "Open Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.primary-heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 7rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: default;
+  color: var(--color-heading);
+}
+
+.sub-heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  cursor: default;
+  color: var(--color-sub-head);
+}
+
+.section-heading {
+  font-size: 5rem;
+  padding: 2rem 5rem;
+  cursor: default;
+  color: var(--color-sec-head);
+}
+
+.para {
+  font-size: 2rem;
+  letter-spacing: 1.1px;
+  color: var(--color-text);
+  cursor: default;
+}
+
+.span-head {
+  font-size: 2.5rem;
+  cursor: default;
+}
+
+// ----------------------------------------------------
+.theme {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+
+  @media only screen and (max-width: $bp-large) {
+    right: 10rem;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+
+    &--light,
+    &--dark {
+      width: 75%;
+      height: 75%;
+    }
+
+    &--light {
+      fill: rgb(255, 69, 0);
+      filter: drop-shadow(0rem 0rem 5rem 1rem orangered);
+    }
+
+    &--dark {
+      fill: #004fb0;
+      filter: drop-shadow(1rem 1rem 5rem 1rem rgba(0, 0, 255, 0.5));
+    }
+  }
+}
+
+.tog_theme {
+  opacity: 0;
+  display: none;
+}
