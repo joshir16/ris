@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="Hello! I'm Rishabh, a front-end web developer and a student"
+      content="Hello! I'm Rishabh, a front-end web developer and student"
     />
 
     <title>Rishabh</title>
@@ -71,30 +71,51 @@
         </ul>
 
         <div class="social">
-          <div class="social__icon">
-            <svg class="social__icon--svg">
-              <use xlink:href="img/sprite.svg#icon-github"></use>
-            </svg>
-          </div>
-          <div class="social__icon">
-            <svg class="social__icon--svg">
-              <use xlink:href="img/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </div>
-          <div class="social__icon">
-            <svg class="social__icon--svg">
-              <use xlink:href="img/sprite.svg#icon-instagram"></use>
-            </svg>
-          </div>
-          <div class="social__icon">
-            <svg class="social__icon--svg">
-              <use xlink:href="img/sprite.svg#icon-facebook"></use>
-            </svg>
-          </div>
+          <a href="https://github.com/joshir16" class="social__link">
+            <div class="social__icon">
+              <svg class="social__icon--svg">
+                <use xlink:href="img/sprite.svg#icon-github"></use>
+              </svg>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rishabh-joshi-61399196/"
+            class="social__link"
+          >
+            <div class="social__icon">
+              <svg class="social__icon--svg">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/the.rishabhj/"
+            class="social__link"
+          >
+            <div class="social__icon">
+              <svg class="social__icon--svg">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/joshir838/" class="social__link">
+            <div class="social__icon">
+              <svg class="social__icon--svg">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </div>
+          </a>
         </div>
       </nav>
     </div>
 
+    <!------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------>
+    <!-- Main Container ------------------------------------------------------------>
+    <!------------------------------------------------------------------------------>
     <main class="container">
       <!-- header ------------------------------------------------------------------>
       <header class="header" id="home">
@@ -214,14 +235,14 @@
           <!-- project 4 ---------------------------->
           <div class="work__container__box project-4">
             <a
-              href="https://joshir16.github.io/colorflip/"
+              href="https://joshir16.github.io/portfolio/"
               target="_blank"
               class="work__container__box--link"
             >
               <div class="work__container__box--link--bg"></div>
-              <h3 class="work__container__box--link--name">Colorflip</h3>
+              <h3 class="work__container__box--link--name">Portfolio</h3>
               <img
-                src="img/colorflip.jpg"
+                src="img/portfolio.jpg"
                 alt="project-4"
                 class="work__container__box--link--img"
               />
@@ -283,14 +304,14 @@
           <!-- project 8 ---------------------------->
           <div class="work__container__box project-8">
             <a
-              href="https://joshir16.github.io/portfolio/"
+              href="https://joshir16.github.io/colorflip/"
               target="_blank"
               class="work__container__box--link"
             >
               <div class="work__container__box--link--bg"></div>
-              <h3 class="work__container__box--link--name">Portfolio</h3>
+              <h3 class="work__container__box--link--name">Colorflip</h3>
               <img
-                src="img/portfolio.jpg"
+                src="img/colorflip.jpg"
                 alt="project-8"
                 class="work__container__box--link--img"
               />
@@ -358,10 +379,15 @@
       <!-- footer ------------------------------------------------------------------>
       <footer class="footer">
         <div class="footer__container">
+          <!-- credit ------------------->
           <h3 class="footer__container__credit">
-            © 2021, Rishabh Joshi. All rights reserved.
+            © 2021, All rights reserved.
           </h3>
+          <!-- <h3 class="footer__container__credit">
+            © 2021, Rishabh Joshi. All rights reserved.
+          </h3> -->
 
+          <!-- footer nav --------------->
           <nav class="footer__container__navbar">
             <ul class="footer__container__navbar__list">
               <li class="footer__container__navbar--item">
@@ -383,17 +409,25 @@
             </ul>
           </nav>
 
+          <!-- icons mail / phone ------->
           <div class="footer__container__extra">
-            <div class="footer__container__extra--box">
-              <svg class="footer__container__extra--box--svg">
-                <use xlink:href="img/sprite.svg#icon-envelope"></use>
-              </svg>
-            </div>
-            <div class="footer__container__extra--box">
-              <svg class="footer__container__extra--box--svg">
-                <use xlink:href="img/sprite.svg#icon-phone"></use>
-              </svg>
-            </div>
+            <!-- mail ----------->
+            <a href="mailto:joshir838@gmail.com">
+              <div class="footer__container__extra--box">
+                <svg class="footer__container__extra--box--svg">
+                  <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                </svg>
+              </div>
+            </a>
+
+            <!-- phone ---------->
+            <a href="tel:+918860844418">
+              <div class="footer__container__extra--box">
+                <svg class="footer__container__extra--box--svg">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
       </footer>
