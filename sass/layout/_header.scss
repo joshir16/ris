@@ -9,5 +9,30 @@
     &--heading {
       text-transform: none;
     }
+
+    &--para {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(100, end), blink-caret 0.7s step-end infinite;
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--color-text);
   }
 }
