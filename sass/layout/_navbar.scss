@@ -89,6 +89,8 @@
       letter-spacing: 2px;
       line-height: 1.1;
 
+      -webkit-tap-highlight-color: transparent;
+
       &:hover {
         color: var(--color-nav-hov);
         background-color: var(--color-nav-hov-bg);
@@ -97,13 +99,16 @@
   }
 }
 
+// =========================================================================
 .nav_burger {
   position: fixed;
   top: 2.7rem;
   right: 2.5rem;
   width: 5rem;
   height: 4rem;
+
   background-color: #f5f5f5;
+  -webkit-tap-highlight-color: transparent;
 
   display: none;
   justify-content: center;
@@ -193,6 +198,7 @@
     height: 4rem;
     padding: 0.7rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     &--svg {
       width: 100%;

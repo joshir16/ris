@@ -103,6 +103,8 @@
   position: absolute;
   z-index: 100;
 
+  -webkit-tap-highlight-color: transparent;
+
   &:hover {
     color: var(--color-btn-hov);
     background-color: var(--color-btn-bg-hov);

@@ -9,8 +9,10 @@
 
   margin-top: 3rem;
   padding: 1rem 2rem;
+
   color: var(--color-btn);
   border: 1px solid var(--color-btn-bd);
+  -webkit-tap-highlight-color: transparent;
 
   display: inline-block;
   position: relative;
