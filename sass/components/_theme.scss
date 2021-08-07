@@ -9,31 +9,60 @@
     right: 10rem;
   }
 
-  &__icon {
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__switch {
     width: 5rem;
-    height: 5rem;
+    height: 2.5rem;
+    border-radius: 25rem;
+    background-color: var(--color-switch-bg);
+    // background-color: #333;
+
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+    position: relative;
 
-    &--light,
-    &--dark {
-      width: 75%;
-      height: 75%;
-    }
+    transition: transform 0.3s ease-in;
 
-    &--light {
-      fill: rgb(255, 69, 0);
-      filter: drop-shadow(0rem 0rem 5rem 1rem orangered);
-    }
+    &::after {
+      background-color: var(--color-switch);
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
 
-    &--dark {
-      fill: #004fb0;
-      filter: drop-shadow(1rem 1rem 5rem 1rem rgba(0, 0, 255, 0.5));
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+
+      transition: transform 0.2s ease-in;
     }
+  }
+
+  &__light,
+  &__dark {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__light {
+    fill: rgb(255, 69, 0);
+    filter: drop-shadow(0rem 0rem 5rem 1rem orangered);
+  }
+
+  &__dark {
+    fill: #004fb0;
+    filter: drop-shadow(1rem 1rem 5rem 1rem rgba(0, 0, 255, 0.5));
   }
 }
 
-.tog_theme {
-  opacity: 0;
-  display: none;
+.theme__checkbox:checked ~ .theme__switch::after {
+  transform: translateX(2.5rem);
 }

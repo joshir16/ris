@@ -15,30 +15,30 @@
     <link rel="icon" type="png" href="img/logo-32x.jpg" sizes="32x32" />
     <link rel="icon" type="png" href="img/logo.png" />
 
-    <!-- <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    /> -->
-
-    <title>Rishabh</title>
+   <title>Rishabh</title>
 
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/script.js"></script>
-    <script defer src="js/slider.js"></script>
   </head>
 
   <body class="light_theme">
     <!-- Theme --------------------------------------------------------------------->
     <div class="theme">
-      <div class="theme__icon">
-        <svg class="theme__icon--light tog_theme">
-          <use xlink:href="img/sprite.svg#icon-sun"></use>
-        </svg>
+      <svg class="theme__light tog_theme">
+        <use xlink:href="img/sprite.svg#icon-sun"></use>
+      </svg>
 
-        <svg class="theme__icon--dark">
-          <use xlink:href="img/sprite.svg#icon-moon-o"></use>
-        </svg>
-      </div>
+      <input
+        type="checkbox"
+        name="theme__checkbox"
+        id="theme__checkbox"
+        class="theme__checkbox"
+      />
+      <label for="theme__checkbox" class="theme__switch"></label>
+
+      <svg class="theme__dark">
+        <use xlink:href="img/sprite.svg#icon-moon-o"></use>
+      </svg>
     </div>
 
     <!-- Navigation ---------------------------------------------------------------->

@@ -44,6 +44,10 @@ $bp-smallest: 28.75em; // 460px
 
   //---------------------------------------------- color border
   --color-border: var(--color-grey-dark);
+
+  // --------------------------------------------- color switch theme
+  --color-switch: rgb(255, 69, 0);
+  --color-switch-bg: var(--color-grey-light);
 }
 
 .dark_theme {
@@ -73,4 +77,8 @@ $bp-smallest: 28.75em; // 460px
 
   //---------------------------------------------- color border
   --color-border: var(--color-grey-light);
+
+  // --------------------------------------------- color switch theme
+  --color-switch: #004fb0;
+  --color-switch-bg: var(--color-grey-dark);
 }

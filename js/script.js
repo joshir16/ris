@@ -1,5 +1,9 @@
 /** @format */
 
+// ==============================================================================
+// ====================<.... S M O O T H  S C R O L L....>=======================
+// ==============================================================================
+
 let closeNavbar = document.querySelector(".navbar");
 let container = document.querySelector(".container");
 
@@ -20,21 +24,70 @@ document.querySelector(".navbar-list").addEventListener("click", function (e) {
   }
 });
 
-// =========================================================================
+// ==============================================================================
+// ============================<....T H E M E....>===============================
+// ==============================================================================
 
-let sun = document.querySelector(".theme__icon--light");
-let moon = document.querySelector(".theme__icon--dark");
+const themeSwitch = document.querySelector(".theme__switch");
 
-moon.addEventListener("click", function () {
-  moon.classList.toggle("tog_theme");
-  sun.classList.toggle("tog_theme");
+const themeToggle = function () {
   document.body.classList.toggle("light_theme");
   document.body.classList.toggle("dark_theme");
+};
+
+themeSwitch.addEventListener("click", function () {
+  if (document.querySelector(".theme__checkbox").checked) {
+    themeToggle();
+  } else {
+    themeToggle();
+  }
 });
 
-sun.addEventListener("click", function () {
-  moon.classList.toggle("tog_theme");
-  sun.classList.toggle("tog_theme");
-  document.body.classList.toggle("light_theme");
-  document.body.classList.toggle("dark_theme");
+// ==============================================================================
+// ==========================<....S L I D E R....>===============================
+// ==============================================================================
+
+const slides = document.querySelectorAll(".slides");
+const slider = document.querySelector(".slider");
+const btnLeft = document.querySelector(".btn_slide-left");
+const btnRight = document.querySelector(".btn_slide-right");
+
+let curSlide = 0;
+
+const maxSlide = slides.length - 1;
+
+// NEXT Slide =====================
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+
+goToSlide(0);
+
+//
+const nextSlide = function () {
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  goToSlide(curSlide);
+};
+
+// PREV Slide =========================
+const prevSlide = function () {
+  if (curSlide === 0) curSlide = maxSlide;
+  else curSlide--;
+
+  goToSlide(curSlide);
+};
+
+// EVENTS HANDLER =====================
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
+
+document.addEventListener("keydown", function (e) {
+  e.key === "ArrowLeft" && prevSlide();
+  e.key === "ArrowRight" && nextSlide();
 });
