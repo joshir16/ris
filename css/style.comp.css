@@ -23,7 +23,9 @@
   --color-btn-bg-hov: var(--color-black);
   --color-icon: var(--color-black);
   --color-icon-hov: var(--color-blue);
-  --color-border: var(--color-grey-dark); }
+  --color-border: var(--color-grey-dark);
+  --color-switch: rgb(255, 69, 0);
+  --color-switch-bg: var(--color-grey-light); }
 
 .dark_theme {
   --color-bg: var(--color-black);
@@ -40,7 +42,9 @@
   --color-btn-bg-hov: var(--color-white);
   --color-icon: var(--color-white);
   --color-icon-hov: var(--color-blue);
-  --color-border: var(--color-grey-light); }
+  --color-border: var(--color-grey-light);
+  --color-switch: #004fb0;
+  --color-switch-bg: var(--color-grey-dark); }
 
 /** @format */
 .btn {
@@ -95,28 +99,47 @@
 .theme {
   position: absolute;
   top: 3rem;
-  right: 2rem; }
+  right: 2rem;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
   @media only screen and (max-width: 62.5em) {
     .theme {
       right: 10rem; } }
-  .theme__icon {
+  .theme__checkbox {
+    display: none; }
+  .theme__switch {
     width: 5rem;
-    height: 5rem;
+    height: 2.5rem;
+    border-radius: 25rem;
+    background-color: var(--color-switch-bg);
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent; }
-    .theme__icon--light, .theme__icon--dark {
-      width: 75%;
-      height: 75%; }
-    .theme__icon--light {
-      fill: orangered;
-      filter: drop-shadow(0rem 0rem 5rem 1rem orangered); }
-    .theme__icon--dark {
-      fill: #004fb0;
-      filter: drop-shadow(1rem 1rem 5rem 1rem rgba(0, 0, 255, 0.5)); }
+    position: relative;
+    transition: transform 0.3s ease-in; }
+    .theme__switch::after {
+      background-color: var(--color-switch);
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      transition: transform 0.2s ease-in; }
+  .theme__light, .theme__dark {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem; }
+  .theme__light {
+    fill: orangered;
+    filter: drop-shadow(0rem 0rem 5rem 1rem orangered); }
+  .theme__dark {
+    fill: #004fb0;
+    filter: drop-shadow(1rem 1rem 5rem 1rem rgba(0, 0, 255, 0.5)); }
 
-.tog_theme {
-  opacity: 0;
-  display: none; }
+.theme__checkbox:checked ~ .theme__switch::after {
+  transform: translateX(2.5rem); }
 
 /** @format */
 *,
