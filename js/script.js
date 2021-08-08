@@ -28,20 +28,20 @@ document.querySelector(".navbar-list").addEventListener("click", function (e) {
 // ============================<....T H E M E....>===============================
 // ==============================================================================
 
+const checkBox = document.querySelector(".theme__checkbox");
 const themeSwitch = document.querySelector(".theme__switch");
 
-const themeToggle = function () {
-  document.body.classList.toggle("light_theme");
-  document.body.classList.toggle("dark_theme");
-};
-
-themeSwitch.addEventListener("click", function () {
+checkBox.addEventListener("change", function () {
   if (document.querySelector(".theme__checkbox").checked) {
-    themeToggle();
+    document.body.classList.remove("light_theme");
+    document.body.classList.add("dark_theme");
   } else {
-    themeToggle();
+    document.body.classList.remove("dark_theme");
+    document.body.classList.add("light_theme");
   }
 });
+
+//  used 'change' event listener on the input (checkbox)
 
 // ==============================================================================
 // ==========================<....S L I D E R....>===============================

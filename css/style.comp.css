@@ -112,7 +112,7 @@
   .theme__switch {
     width: 5rem;
     height: 2.5rem;
-    border-radius: 25rem;
+    border-radius: 30rem;
     background-color: var(--color-switch-bg);
     cursor: pointer;
     position: relative;
@@ -128,7 +128,6 @@
       border-radius: 50%;
       transition: transform 0.2s ease-in; }
   .theme__light, .theme__dark {
-    cursor: pointer;
     width: 2.5rem;
     height: 2.5rem; }
   .theme__light {

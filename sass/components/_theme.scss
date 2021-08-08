@@ -21,7 +21,7 @@
   &__switch {
     width: 5rem;
     height: 2.5rem;
-    border-radius: 25rem;
+    border-radius: 30rem;
     background-color: var(--color-switch-bg);
     // background-color: #333;
 
@@ -47,7 +47,6 @@
 
   &__light,
   &__dark {
-    cursor: pointer;
     width: 2.5rem;
     height: 2.5rem;
   }
